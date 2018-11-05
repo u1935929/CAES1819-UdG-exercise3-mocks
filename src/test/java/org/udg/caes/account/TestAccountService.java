@@ -29,8 +29,6 @@ public class TestAccountService {
     new Verifications(){{
       am.updateAccount(acc1); times = 1;
       am.updateAccount(acc2); times = 1;
-      acc2.credit(0); times = 1;
-      acc1.debit(0); times = 1;
       assertEquals(acc1.getBalance(), 50);
       assertEquals(acc2.getBalance(),400);
     }};
